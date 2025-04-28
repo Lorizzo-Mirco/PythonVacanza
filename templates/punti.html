@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="punti-page">
+    <h2>I tuoi punti</h2>
+    
+    <div class="punti-display">
+        <div class="big-points">
+            <span class="number">{{ crediti }}</span>
+            <span class="label">Crediti disponibili</span>
+        </div>
+        
+        <div class="info-box">
+            <h3>Come ottenere più crediti</h3>
+            <ul>
+                <li>Ogni giorno ricevi 20 crediti gratuiti</li>
+                <li>Colleziona carte rare per guadagnare bonus speciali</li>
+                <li>Completa missioni giornaliere per ottenere ricompense</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="actions">
+        <a href="{{ url_for('index') }}" class="btn secondary">Torna alla Home</a>
+    </div>
+</div>
+{% endblock %}

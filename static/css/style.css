@@ -1,0 +1,286 @@
+/* Stile generale */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header e navigazione */
+header {
+    background-color: #ff5350;
+    color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffe45c;
+}
+
+/* Bottoni */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    margin: 10px 5px;
+    font-weight: bold;
+}
+
+.primary {
+    background-color: #4caf50;
+    color: white;
+}
+
+.primary:hover {
+    background-color: #388e3c;
+}
+
+.secondary {
+    background-color: #2196f3;
+    color: white;
+}
+
+.secondary:hover {
+    background-color: #1976d2;
+}
+
+/* Messaggi flash */
+.flash-messages {
+    margin: 10px 0;
+}
+
+.flash-message {
+    padding: 10px;
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: #856404;
+}
+
+/* Carte Pokémon */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
+    justify-content: center;
+}
+
+.card {
+    width: 220px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.card-stats {
+    font-size: 0.9rem;
+}
+
+.card-stats p {
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Stili per diverse rarità */
+.comune {
+    border: 2px solid #a8a8a8;
+}
+
+.non-comune {
+    border: 2px solid #3498db;
+}
+
+.rara {
+    border: 2px solid #f1c40f;
+    background: linear-gradient(145deg, #fff, #fffde7);
+}
+
+.ultra-rara {
+    border: 2px solid #e74c3c;
+    background: linear-gradient(145deg, #fff, #ffebee);
+}
+
+/* Home page */
+.home-page .stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.stat-box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 45%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.big-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff5350;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.actions form {
+    margin: 0 10px;
+}
+
+.info {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.info ul {
+    list-style-type: circle;
+    margin-left: 20px;
+}
+
+/* Punti page */
+.punti-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.big-points {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
+}
+
+.big-points .number {
+    display: block;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #ff5350;
+}
+
+.big-points .label {
+    display: block;
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+.info-box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .home-page .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .stat-box {
+        width: 90%;
+        margin-bottom: 15px;
+    }
+    
+    .actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .big-points, .info-box {
+        width: 95%;
+    }
+}

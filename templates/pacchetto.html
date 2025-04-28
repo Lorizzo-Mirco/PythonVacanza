@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="pacchetto-page">
+    <h2>Carte estratte dal pacchetto</h2>
+    <p>Crediti rimanenti: {{ crediti }}</p>
+    
+    <div class="cards-container">
+        {% for carta in carte %}
+            <div class="card {{ carta['Rarità'].iloc[0].lower().replace(' ', '-') }}">
+                <h3>{{ carta['Nome'].iloc[0] }}</h3>
+                <div class="card-stats">
+                    <p>Generazione: {{ carta['Generazione'].iloc[0] }}</p>
+                    <p>Rarità: {{ carta['Rarità'].iloc[0] }}</p>
+                    <p>Attacco: {{ carta['Attacco'].iloc[0] }}</p>
+                    <p>Difesa: {{ carta['Difesa'].iloc[0] }}</p>
+                    <p>Valore Punti: {{ carta['Valore_Punti'].iloc[0] }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    
+    <div class="actions">
+        <form action="{{ url_for('apriPacchetto') }}" method="post">
+            <button type="submit" class="btn primary">Apri un altro pacchetto (10 crediti)</button>
+        </form>
+        <a href="{{ url_for('index') }}" class="btn secondary">Torna alla Home</a>
+    </div>
+</div>
+{% endblock %}

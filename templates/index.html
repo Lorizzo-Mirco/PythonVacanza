@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="home-page">
+    <section class="stats">
+        <div class="stat-box">
+            <h2>I tuoi crediti</h2>
+            <p class="big-number">{{ crediti }}</p>
+        </div>
+        <div class="stat-box">
+            <h2>Carte nella collezione</h2>
+            <p class="big-number">{{ collezione|length }}</p>
+        </div>
+    </section>
+
+    <section class="actions">
+        <form action="{{ url_for('apriPacchetto') }}" method="post">
+            <button type="submit" class="btn primary">Apri Pacchetto (10 crediti)</button>
+        </form>
+        
+        <form action="{{ url_for('salvaCollezione') }}" method="post">
+            <button type="submit" class="btn secondary">Salva Collezione</button>
+        </form>
+    </section>
+
+    <section class="info">
+        <h2>Come giocare</h2>
+        <ul>
+            <li>Ogni pacchetto costa 10 crediti</li>
+            <li>Colleziona carte rare per aumentare il tuo punteggio</li>
+            <li>Salva la tua collezione per conservare i tuoi progressi</li>
+        </ul>
+    </section>
+</div>
+{% endblock %}
